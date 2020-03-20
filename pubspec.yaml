@@ -44,7 +44,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  auto_route_generator:
+  auto_route_generator: 0.3.2
   # of course build_runner is needed to run the generator
   build_runner:
 
