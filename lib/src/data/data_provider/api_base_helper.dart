@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_bloc_architecture/src/services/app_exceptions.dart';
+import 'package:flutter_bloc_architecture/src/data/data_provider/app_exceptions.dart';
 import 'package:http/http.dart' as http;
 
 class ApiBaseHelper {

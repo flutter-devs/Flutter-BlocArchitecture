@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_architecture/src/routes/router.gr.dart';
+import 'package:flutter_bloc_architecture/src/ui/routes/router.gr.dart';
 import 'package:flutter_bloc_architecture/src/ui/screens/timer_screen.dart';
 
 import 'bloc/timer_bloc/bloc.dart';

@@ -1,6 +1,6 @@
+import 'package:flutter_bloc_architecture/src/data/repository/repository_interfaces/i_api_repository.dart';
 import 'package:flutter_bloc_architecture/src/models/api_model/response_models/upcoming_event_response.dart';
-import 'package:flutter_bloc_architecture/src/repository/repository_interfaces/i_api_repository.dart';
-import 'package:flutter_bloc_architecture/src/services/api_base_helper.dart';
+import 'package:flutter_bloc_architecture/src/data/data_provider/api_base_helper.dart';
 import 'package:flutter_bloc_architecture/src/utils/utils.dart';
 
 class APIRepository extends IAPIRepository {
