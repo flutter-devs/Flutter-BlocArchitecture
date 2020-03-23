@@ -5,8 +5,6 @@ import 'package:flutter_bloc_architecture/src/bloc/timer_bloc/ticker.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
-
-
 class TimerScreen extends StatelessWidget {
   static const TextStyle timerTextStyle = TextStyle(
     fontSize: 60,
@@ -151,5 +149,3 @@ class Background extends StatelessWidget {
     );
   }
 }
-
-
