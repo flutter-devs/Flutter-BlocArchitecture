@@ -24,3 +24,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class NavigationProvider with ChangeNotifier {
+  int _currentNavigation = 0;
+
+  int get currentNavigation => _currentNavigation;
+
+  set currentNavigation(int value) {
+    _currentNavigation = value;
+    notifyListeners();
+  }
+}

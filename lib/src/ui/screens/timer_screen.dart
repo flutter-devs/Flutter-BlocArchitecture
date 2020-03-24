@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_architecture/src/bloc/timer_bloc/bloc.dart';
-import 'package:flutter_bloc_architecture/src/bloc/timer_bloc/ticker.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
-class TimerScreen extends StatelessWidget {
+class TimerScreen extends StatefulWidget {
   static const TextStyle timerTextStyle = TextStyle(
     fontSize: 60,
     fontWeight: FontWeight.bold,
   );
 
+  @override
+  _TimerScreenState createState() => _TimerScreenState();
+}
+
+class _TimerScreenState extends State<TimerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
