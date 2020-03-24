@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_bloc_architecture/src/utils/hex_color.dart';
 
 class AppColors {
+  //Todo
   static Color get primaryColor => HexColor("#6998e4");
 
   static Color get black => HexColor("#000000");

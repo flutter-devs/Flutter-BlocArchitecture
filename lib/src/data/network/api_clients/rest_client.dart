@@ -2,20 +2,18 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_bloc_architecture/src/data/data_provider/app_exceptions.dart';
+import 'package:flutter_bloc_architecture/src/data/network/constants/endpoints.dart';
+import 'package:flutter_bloc_architecture/src/data/network/exceptions/app_exceptions.dart';
 import 'package:http/http.dart' as http;
 
-class ApiBaseHelper {
-  String baseUrl;
-
-  ApiBaseHelper(this.baseUrl);
-
+class RestClient {
   Future<dynamic> get(String url, {Map<String, String> headers}) async {
     print('Api Get, url $url');
     var responseJson;
 
     try {
-      final response = await http.get(baseUrl + url, headers: headers);
+      final response =
+          await http.get(Endpoints.baseUrl + url, headers: headers);
       responseJson = _returnResponse(response);
     } on SocketException {
       print('No net');
@@ -30,7 +28,7 @@ class ApiBaseHelper {
     print('Api Post, url $url');
     var responseJson;
     try {
-      final response = await http.post(baseUrl + url, body: body);
+      final response = await http.post(Endpoints.baseUrl + url, body: body);
       responseJson = _returnResponse(response);
     } on SocketException {
       print('No net');
@@ -45,7 +43,7 @@ class ApiBaseHelper {
     print('Api Put, url $url');
     var responseJson;
     try {
-      final response = await http.put(baseUrl + url, body: body);
+      final response = await http.put(Endpoints.baseUrl + url, body: body);
       responseJson = _returnResponse(response);
     } on SocketException {
       print('No net');
@@ -60,7 +58,7 @@ class ApiBaseHelper {
     print('Api delete, url $url');
     var apiResponse;
     try {
-      final response = await http.delete(baseUrl + url);
+      final response = await http.delete(Endpoints.baseUrl + url);
       apiResponse = _returnResponse(response);
     } on SocketException {
       print('No net');
