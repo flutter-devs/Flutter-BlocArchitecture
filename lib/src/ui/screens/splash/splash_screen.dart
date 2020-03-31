@@ -28,6 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
             if (animationController.isCompleted) {
               Navigator.of(context).pushNamed(PageRouteConstants.login_screen);
             }
+            setState(() {});
           });
     animationController.forward();
   }
