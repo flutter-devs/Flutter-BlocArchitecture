@@ -267,7 +267,20 @@ The presentation layer's responsibility is to figure out how to render itself ba
       ),
     );
 ```
+## *Pros of BLoC*
 
+- Easy to separate UI from logic
+- Easy to test code
+- Easy to reuse code
+- Good performance
 
+## *Cons of BLoC*
 
+- Technically, you need to use streams in both directions, creating a lot of boilerplate. However, many people cheat this by using streams only from the backend to the UI, but when events occur they’re simply calling functions directly instead of feeding those events into a sink.
+
+- More boilerplate for small app, but it can be worth it for anything larger than a small app.
+
+## *Refrences*
+1. https://bloclibrary.dev
+2. https://pub.dev/packages/bloc
 
