@@ -283,4 +283,5 @@ The presentation layer's responsibility is to figure out how to render itself ba
 ## *Refrences*
 1. https://bloclibrary.dev
 2. https://pub.dev/packages/bloc
-
+3. https://flutter.dev/
+4. https://blog.codemagic.io/flutter-tutorial-pros-and-cons-of-state-management-approaches/
