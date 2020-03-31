@@ -3,6 +3,7 @@
 
 <img src="https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png" alt="Bloc Architecture" />
 Why Bloc?
+
 When building production quality applications, managing state becomes critical.
 
 As developers we want to:
