@@ -11,7 +11,6 @@ abstract class ApiRestClient {
   factory ApiRestClient(Dio dio) = _ApiRestClient;
 
   /*Login Api*/
-  @Headers(<String, String>{"Content-Type": "application/json"})
   @POST(UrlConstant.BASE_URL + UrlConstant.LOGIN)
   @FormUrlEncoded()
   Future<LoginResponse> login(@Body() LoginRequest loginRequest);
