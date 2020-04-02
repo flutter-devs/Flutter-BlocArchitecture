@@ -21,6 +21,6 @@ class ApiRepository {
       email: email,
       password: password,
     );
-    return await ApiRestClient(Dio()).login(loginRequest);
+    return await apiRestClient.login(loginRequest);
   }
 }
