@@ -1,7 +1,7 @@
 # Flutter Bloc Architecture 
 
 
-# flutter_bloc  [![pub package](https://img.shields.io/pub/v/provider.svg)](https://pub.dev/packages/flutter_bloc)
+# flutter_bloc  [![pub package](https://img.shields.io/pub/v/flutter_bloc)](https://pub.dev/packages/flutter_bloc)
 
 Flutter Widgets that make it easy to implement the BLoC (Business Logic Component) design pattern. Built to be used with the bloc state management package.
 
