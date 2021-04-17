@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_architecture/src/di/app_config.dart';
 import 'package:flutter_bloc_architecture/src/models/network_data_models/login/response/login_response.dart';
 import 'package:flutter_bloc_architecture/src/network/repository/api_repository.dart';
 import 'package:flutter_bloc_architecture/src/utils/helper.dart';
@@ -8,10 +9,9 @@ import 'package:flutter_bloc_architecture/src/utils/validator.dart';
 import 'login.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  final ApiRepository apiRepository;
   final Validator validator = Validator();
 
-  LoginBloc({@required this.apiRepository});
+  LoginBloc() : super(UserUnavailable());
 
   @override
   LoginState get initialState => UserUnavailable();
@@ -21,7 +21,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     if (event is SignInUser) {
       yield LoginLoading();
       try {
-        LoginResponse loginResponse = await apiRepository.login(
+        LoginResponse loginResponse = await appConfig<ApiRepository>().login(
           email: event.email,
           password: event.password,
         );
@@ -49,7 +49,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       );
     }
   }
-
   bool _isEmailValid(String email) {
     return validator.validateEmail(email);
   }

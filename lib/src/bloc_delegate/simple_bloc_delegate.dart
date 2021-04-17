@@ -1,23 +1,23 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+class SimpleBlocDelegate extends BlocObserver {
+  final bool verbose = false;
 
-/*Called whenever an [event] is `added` to any [bloc] with the given [bloc] and [event].
- A great spot to add universal logging/analytics.*/
-class SimpleBlocDelegate extends BlocDelegate {
   @override
   void onEvent(Bloc bloc, Object event) {
     super.onEvent(bloc, event);
-    print('onEvent $event');
+   print(event.toString());
   }
 
   @override
-  onTransition(Bloc bloc, Transition transition) {
+  void onTransition(Bloc bloc, Transition transition) {
     super.onTransition(bloc, transition);
-    print('onTransition $transition');
-  }
-
-  @override
-  void onError(Bloc bloc, Object error, StackTrace stacktrace) {
-    super.onError(bloc, error, stacktrace);
-    print('onError $error');
+    print('''
+${bloc.runtimeType} - Transition { 
+  event: ${transition.event.runtimeType} 
+  currentState: ${transition.currentState.runtimeType} 
+  nextState: ${transition.nextState.runtimeType}
+}
+''');
   }
 }

@@ -19,6 +19,9 @@ class StringConstant {
   static const String no = 'No';
   static const String yes = 'Yes';
   static const String ok = 'Ok';
+  static const String home = 'Home';
+  static const String help = 'Self Help';
+  static const String profile = 'Profile';
   static const String please_enter_email_address = "Please enter email address";
 
   static const String please_check_internet_connectivity =

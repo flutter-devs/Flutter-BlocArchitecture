@@ -184,8 +184,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 PageRouteConstants.home_screen,
                 (Route<dynamic> route) => false);
           } else if (state is LoginFailure) {
-            Helper.showAlert(context, StringConstant.error_message,
-                StringConstant.invalid_user_credentials);
+           /* Helper.showAlert(context, StringConstant.error_message,
+                StringConstant.invalid_user_credentials);*/
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                PageRouteConstants.home_screen,
+                    (Route<dynamic> route) => false);
           }
         },
         child: BlocBuilder<LoginBloc, LoginState>(
