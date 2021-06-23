@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
         return new Scaffold(
             backgroundColor: AppColors.white,
             key: _scaffoldKey,
-            resizeToAvoidBottomPadding: true,
+            resizeToAvoidBottomInset: true,
             body: SingleChildScrollView(
               physics: NeverScrollableScrollPhysics(),
               child: Container(
